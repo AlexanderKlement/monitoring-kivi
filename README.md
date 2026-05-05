@@ -54,19 +54,19 @@ docker exec -it grafana grafana-cli admin reset-admin-password <newpassword>
 ### Install node_exporter (fresh server)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AlexanderKlement/monitoring-kivi/main/install_node_exporter.sh | bash
+curl -fsSL https://raw.githubusercontent.com/AlexanderKlement/monitoring-kivi/master/install_node_exporter.sh | bash
 ```
 
 ### Upgrade node_exporter
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AlexanderKlement/monitoring-kivi/main/upgrade_node_exporter.sh | bash
+curl -fsSL https://raw.githubusercontent.com/AlexanderKlement/monitoring-kivi/master/upgrade_node_exporter.sh | bash
 ```
 
 ### Allow monitoring server through UFW
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/AlexanderKlement/monitoring-kivi/main/allow_ufw.sh | bash
+curl -fsSL https://raw.githubusercontent.com/AlexanderKlement/monitoring-kivi/master/allow_ufw.sh | bash
 ```
 
 This allows port 9100 only from the monitoring server's IPs and denies it from everywhere else.
