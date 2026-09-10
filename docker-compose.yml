@@ -10,7 +10,11 @@ services:
     container_name: prometheus
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
-    command: --config.file=/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+      - --storage.tsdb.retention.time=31d
+      - --storage.tsdb.retention.size=5GB
     ports:
       - "9090:9090"
     logging: *default-logging
@@ -28,3 +32,4 @@ services:
 
 volumes:
   grafana-storage:
+  prometheus-data:
