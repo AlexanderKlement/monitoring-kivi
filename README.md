@@ -82,3 +82,7 @@ When a new node_exporter release is out:
 3. Run the upgrade one-liner on each monitored server
 
 ---
+
+
+## Change hostname:
+sudo hostname your-new-name
